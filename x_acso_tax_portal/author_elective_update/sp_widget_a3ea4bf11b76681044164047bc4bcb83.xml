@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope) {
+	/* widget controller */
+	var c = this;
+
+	$scope.onStartDateChange = function(){
+		//alert(c.data.dateStart);
+		alert(1);
+	};
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>test_glyph</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>test_glyph</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+	data.dateStart = '';
+	
+
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>A0504931</sys_created_by>
+        <sys_created_on>2021-03-10 21:29:24</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>a3ea4bf11b76681044164047bc4bcb83</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>test_glyph</sys_name>
+        <sys_package display_value="Tax Portal POC" source="x_acso_tax_portal">6c494a791bfa281044164047bc4bcbd9</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tax Portal POC">6c494a791bfa281044164047bc4bcbd9</sys_scope>
+        <sys_update_name>sp_widget_a3ea4bf11b76681044164047bc4bcb83</sys_update_name>
+        <sys_updated_by>A0504931</sys_updated_by>
+        <sys_updated_on>2021-03-10 21:35:38</sys_updated_on>
+        <template><![CDATA[<div class="container">
+       <div class="row">
+               <div class='col-sm-6'>
+                       <div class="form-group">
+                               <div class='input-group date' id='datetimepicker1' ng-model="c.data.dateStart" ng-change="onStartDateChange()">
+                                       <input type='text' class="form-control" />
+                                       <span class="input-group-addon">
+                                               <span class="glyphicon glyphicon-calendar"></span>
+                                       </span>
+                               </div>
+                       </div>
+               </div>
+               <script>
+                       $(function () {
+                               $('#datetimepicker1').datetimepicker({
+                                   sideBySide: true
+                               });
+                       });
+               </script>
+       </div>
+</div>]]></template>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Tax Portal POC">6c494a791bfa281044164047bc4bcbd9</application>
+        <comments/>
+        <file_path/>
+        <instance_id>bf603a70fdd28908bc668279a1340ba2</instance_id>
+        <instance_name>academydev</instance_name>
+        <name>sp_widget_a3ea4bf11b76681044164047bc4bcb83</name>
+        <order/>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script&gt;&lt;![CDATA[function($scope) {
+	/* widget controller */
+	var c = this;
+
+	$scope.onStartDateChange = function(){
+		//alert(c.data.dateStart);
+		alert(1);
+	};
+}]]&gt;&lt;/client_script&gt;&lt;controller_as&gt;c&lt;/controller_as&gt;&lt;css/&gt;&lt;data_table&gt;sp_instance&lt;/data_table&gt;&lt;demo_data/&gt;&lt;description/&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;test_glyph&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link&gt;&lt;![CDATA[function link(scope, element, attrs, controller) {  }]]&gt;&lt;/link&gt;&lt;name&gt;test_glyph&lt;/name&gt;&lt;option_schema/&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+
+	data.dateStart = '';
+	
+
+	
+})();]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;A0504931&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2021-03-10 21:29:24&lt;/sys_created_on&gt;&lt;sys_customer_update&gt;false&lt;/sys_customer_update&gt;&lt;sys_id&gt;a3ea4bf11b76681044164047bc4bcb83&lt;/sys_id&gt;&lt;sys_mod_count&gt;5&lt;/sys_mod_count&gt;&lt;sys_name&gt;test_glyph&lt;/sys_name&gt;&lt;sys_package display_value="Tax Portal POC" source="x_acso_tax_portal"&gt;6c494a791bfa281044164047bc4bcbd9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_replace_on_upgrade&gt;false&lt;/sys_replace_on_upgrade&gt;&lt;sys_scope display_value="Tax Portal POC"&gt;6c494a791bfa281044164047bc4bcbd9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_a3ea4bf11b76681044164047bc4bcb83&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;A0504931&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2021-03-10 21:35:38&lt;/sys_updated_on&gt;&lt;template&gt;&lt;![CDATA[&lt;div class="container"&gt;
+       &lt;div class="row"&gt;
+               &lt;div class='col-sm-6'&gt;
+                       &lt;div class="form-group"&gt;
+                               &lt;div class='input-group date' id='datetimepicker1' ng-model="c.data.dateStart" ng-change="onStartDateChange()"&gt;
+                                       &lt;input type='text' class="form-control" /&gt;
+                                       &lt;span class="input-group-addon"&gt;
+                                               &lt;span class="glyphicon glyphicon-calendar"&gt;&lt;/span&gt;
+                                       &lt;/span&gt;
+                               &lt;/div&gt;
+                       &lt;/div&gt;
+               &lt;/div&gt;
+               &lt;script&gt;
+                       $(function () {
+                               $('#datetimepicker1').datetimepicker({
+                                   sideBySide: true
+                               });
+                       });
+               &lt;/script&gt;
+       &lt;/div&gt;
+&lt;/div&gt;]]&gt;&lt;/template&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-494266128</payload_hash>
+        <record_name>test_glyph</record_name>
+        <reverted_from/>
+        <source>3d3a46f51bfa281044164047bc4bcb2c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>A0504931</sys_created_by>
+        <sys_created_on>2021-03-10 21:35:38</sys_created_on>
+        <sys_id>b65ccf391b76681044164047bc4bcba6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1781e1113e30000001</sys_recorded_at>
+        <sys_updated_by>A0504931</sys_updated_by>
+        <sys_updated_on>2021-03-10 21:35:38</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>3e5ccf39e27668103cfa46cac77993a5</update_guid>
+        <update_guid_history>3e5ccf39e27668103cfa46cac77993a5:-494266128,021c0b79f0766810950533b56ff7d7c7:-1579571235,11fb8ff5037668108c2994550cad988f:802486120,6b2b8ff53676681070bf1080321b7423:-1691631341,c11bc3f5c076681050f72c8d4b3fa4f4:-1094267528,abea4bf1a676681064dd13e39fe3ad84:-1690600274</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2021-03-10 15:38:53">621d0bf91b76681044164047bc4bcbda</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>A0504931</sys_created_by>
+        <sys_created_on>2021-03-10 21:38:53</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>184fff17b78b48e59044c3832e4e8509</sys_id>
+        <sys_metadata>a3ea4bf11b76681044164047bc4bcb83</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>test_glyph</sys_name>
+        <sys_package display_value="Tax Portal POC" source="x_acso_tax_portal">6c494a791bfa281044164047bc4bcbd9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tax Portal POC">6c494a791bfa281044164047bc4bcbd9</sys_scope>
+        <sys_scope_delete display_value="">4d983267358d4e70bb2d788608e34990</sys_scope_delete>
+        <sys_update_name>sp_widget_a3ea4bf11b76681044164047bc4bcb83</sys_update_name>
+        <sys_update_version display_value="sp_widget_a3ea4bf11b76681044164047bc4bcb83">b65ccf391b76681044164047bc4bcba6</sys_update_version>
+        <sys_updated_by>A0504931</sys_updated_by>
+        <sys_updated_on>2021-03-10 21:38:53</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

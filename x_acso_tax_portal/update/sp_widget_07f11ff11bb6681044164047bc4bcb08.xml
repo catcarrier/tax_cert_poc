@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function() {  /* widget controller */  var c = this;}]]></client_script>
+        <controller_as>c</controller_as>
+        <css/>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>false</has_preview>
+        <id>cert_table</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>cert_table</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+	/* populate the 'data' object */
+	/* e.g., data.table = $sp.getValue('table'); */
+	data.table = {
+		"list": []
+	};
+
+	var gr = new GlideRecord("u_tax_exempt_events");
+	
+	// TODO hard coded status, year, store, limit
+	gr.addQuery("u_status", "1"); // Assigned
+	gr.addQuery("u_store_number", 33);
+	gr.addQuery("u_year_received", 2019); 
+	gr.setLimit(50);
+
+	gr.query();
+	while(gr.next()) {
+		var obj = {
+			store_number: gr.getValue("u_store_number"),
+			state: gr.getValue("u_state"),
+			sender_fax: gr.getValue("u_from_fax"),
+			year_received: gr.getValue("u_year_received"),
+			id: gr.getValue('sys_id')
+		};
+		data.table.list.push(obj);
+	}
+
+
+	if(input) {
+
+
+	} else {
+
+	}
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>A0504931</sys_created_by>
+        <sys_created_on>2021-03-10 22:00:14</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>07f11ff11bb6681044164047bc4bcb08</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>cert_table</sys_name>
+        <sys_package display_value="Tax Portal POC" source="x_acso_tax_portal">6c494a791bfa281044164047bc4bcbd9</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tax Portal POC">6c494a791bfa281044164047bc4bcbd9</sys_scope>
+        <sys_update_name>sp_widget_07f11ff11bb6681044164047bc4bcb08</sys_update_name>
+        <sys_updated_by>A0504931</sys_updated_by>
+        <sys_updated_on>2021-03-10 22:56:49</sys_updated_on>
+        <template><![CDATA[<div>
+  <table class="table table-striped">
+		<tr>
+      <th>Store</th>
+      <th>State</th>
+      <th>Received</th>
+      <th>Sender</th>
+    </tr>
+    <tr ng-repeat="row in c.data.table.list">
+    	<td>{{row.store_number}}</td>
+      <td>{{row.state}}</td>
+      <td>{{row.year_received}}</td>
+      <td>{{row.sender_fax}}</td>
+    </tr>
+
+  </table>
+
+	<pre>
+  {{c.data.table.list | json}}
+  </pre>
+
+</div>]]></template>
+    </sp_widget>
+</record_update>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[function($scope) {
+	/* widget controller */
+	var c = this;
+
+	// handle onchange events only when the value changes
+	$scope.dateStartStash = '';
+	$scope.dateEndStash = '';
+
+	c.dateStartChange = function() {
+		var newValue = c.data.dateStart.value;
+		if(newValue == $scope.dateStartStash) return;
+		$scope.dateStartStash = newValue;
+
+		alert("newValue changed to " + $scope.dateStartStash);
+
+		// TODO update data, emit events...
+	}
+
+	c.dateEndChange = function() {
+		var newValue = c.data.dateEnd.value;
+		if(newValue == $scope.dateEndStash) return;
+		$scope.dateEndStash = newValue;
+
+		alert(newValue);
+
+		// TODO update data, emit events...
+	}
+
+}]]></client_script>
+        <controller_as>c</controller_as>
+        <css>div.col {
+	border: 1px solid black;
+}</css>
+        <data_table>sp_instance</data_table>
+        <demo_data/>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>cert_controls2</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>cert_controls2</name>
+        <option_schema/>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function() {
+  /* populate the 'data' object */
+  /* e.g., data.table = $sp.getValue('table'); */
+	data.dateStart = {
+		value:''
+	};
+	
+	data.dateEnd = {
+		value:''
+	};
+	
+	
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>A0504931</sys_created_by>
+        <sys_created_on>2021-03-11 00:03:33</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>6d3eeff11bba681044164047bc4bcb13</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>cert_controls2</sys_name>
+        <sys_package display_value="Tax Portal POC" source="x_acso_tax_portal">6c494a791bfa281044164047bc4bcbd9</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Tax Portal POC">6c494a791bfa281044164047bc4bcbd9</sys_scope>
+        <sys_update_name>sp_widget_6d3eeff11bba681044164047bc4bcb13</sys_update_name>
+        <sys_updated_by>A0504931</sys_updated_by>
+        <sys_updated_on>2021-03-11 00:18:52</sys_updated_on>
+        <template><![CDATA[<div class="row">
+  <div class="col-md-12">
+    <form class="form-inline" role="form">
+      <div class="col">
+        <div class="form-group">
+          <label for="dateStart" ng-class="col-sm-3">Received From: </label>
+          <sp-date-picker id="dateStart"
+                          ng-class="form-control col-sm-7"
+                          sn-include-time="false"
+                          field="data.dateStart"
+                          value-field="data.dateStart"
+                          ng-model="data.dateStart.value" 
+                          ng-model-options="{getterSetter: true}" 
+                          sn-change="c.dateStartChange()"
+                          sn-disabled="false"></sp-date-picker> 
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <label for="dateStart" ng-class="col-sm-3">Received From: </label>
+          <sp-date-picker id="dateStart"
+                          ng-class="form-control col-sm-7"
+                          sn-include-time="false"
+                          field="data.dateStart"
+                          value-field="data.dateStart"
+                          ng-model="data.dateStart.value" 
+                          ng-model-options="{getterSetter: true}" 
+                          sn-change="c.dateStartChange()"
+                          sn-disabled="false"></sp-date-picker> 
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!--
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header">
+
+<div class="sidebyside">
+
+</div>
+<div class="sidebyside">
+<label for="dateEnd">To: </label>
+<sp-date-picker id="dateEnd"
+ng-class="dateFilter"
+sn-include-time="false"
+field="data.dateEnd"
+value-field="data.dateEnd"
+ng-model="data.dateEnd.value" 
+ng-model-options="{getterSetter: true}" 
+sn-change="c.dateEndChange()"
+sn-disabled="false"></sp-date-picker>
+</div>
+<div class="clearfix"/>
+</div>
+</div>
+</nav>
+-->]]></template>
+    </sp_widget>
+</record_update>
